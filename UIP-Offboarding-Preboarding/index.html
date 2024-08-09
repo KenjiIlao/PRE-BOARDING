@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Boarding Orientation Attendance Form</title>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="/script/script.js" defer></script>
+</head>
+<body class="overflow-x-hidden">
+    <div class="w-full min-h-screen bg-white flex flex-col">
+        <!-- Top Bar -->
+        <div class="w-full h-20 p-5 bg-UIP-blue shadow flex items-center px-10">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-black/10 rounded-full">
+                    <img src="img/uip-icons/UIP_solidA.png">
+                </div>
+                <div class="text-white text-2xl font-medium font-poppins">UIP Inc.</div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form id="preboardingForm" class="form-container w-full max-w-4xl mt-10 px-4 mx-auto">
+            <div class="text-center mb-10 font-montserrat">
+                <h1 class="text-4xl font-montserrat font-bold text-UIP-orange lg:text-5xl">UNIFIED INTERNSHIP <br>PROGRAM INC.</h1>
+                <div class="text-4xl font-montserrat font-bold text-UIP-blue">Pre-Boarding Orientation Form</div>
+                <div class="text-base font-poppins font-normal mt-2">Please fill in the required information for the pre-boarding orientation.</div>
+            </div>
+
+            <!-- Form Fields -->
+            <div class="space-y-10">
+                <!-- Name and Intern Type -->
+                <div class="form-group flex lg:flex-row flex-col gap-10 py-4 lg:px-0 px-4">
+                    <!-- Name Field -->
+                    <div class="flex-1 flex flex-col">
+                        <label class="text-lg font-semibold">Name</label>
+                        <input type="text" name="name" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Last Name, First Name M.I" required />
+                    </div>
+                
+                    <!-- Type of Intern Field -->
+                    <div class="flex-1 flex flex-col">
+                        <label class="text-lg font-semibold">Type of Intern</label>
+                        <div class="flex gap-2 text-center">
+                            <label class="flex items-center cursor-pointer relative">
+                                <input type="radio" name="intern-type" value="New Intern" class="hidden peer" required />
+                                <span class="px-4 py-2 bg-gray-100 border border-gray-300 rounded-md hover:bg-UIP-blue  hover:text-white peer-checked:bg-UIP-blue peer-checked:text-white">New Intern</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer relative">
+                                <input type="radio" name="intern-type" value="Returning Intern" class="hidden peer" required />
+                                <span class="px-4 py-2 bg-gray-100 border border-gray-300 rounded-md hover:bg-UIP-blue hover:text-white peer-checked:bg-UIP-blue peer-checked:text-white">Returning Intern</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer relative">
+                                <input type="radio" name="intern-type" value="Voluntary Intern" class="hidden peer" required />
+                                <span class="px-4 py-2 bg-gray-100 border border-gray-300 rounded-md hover:bg-UIP-blue hover:text-white peer-checked:bg-UIP-blue peer-checked:text-white">Voluntary Intern</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                </div>
+
+                <!-- Other Form Fields -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:px-0 px-4">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Email Address</label>
+                        <input type="email" name="email" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Enter your Email Address" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" class="px-3 py-2 border border-gray-300 rounded-md"
+                               placeholder="09-1234-5678" pattern="09[-\s]?\d{4}[-\s]?\d{4}" required />
+                        <span class="text-sm text-gray-500">Format: 09-1234-5678 or 0912345678</span>
+                    </div>
+                    
+                    
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Facebook Link</label>
+                        <input type="url" name="facebook" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Enter your Facebook profile link" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">School/University Name</label>
+                        <input type="text" name="school" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Enter your School Name" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">School/University Contact Number or Email</label>
+                        <input type="text" name="school-contact" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Enter your school contact number or Email" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Course</label>
+                        <input type="text" name="course" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Ex. Bachelor of Science in Computer Engineering" required />
+                    </div>
+                    <div class=" flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Discord Server</label>
+                        <a href="https://discord.gg/NcRqGFWeQd" target="_blank" class="flex items-center cursor-pointer relative">
+                            <input type="radio" name="discord-server" value="Join Server" class="hidden peer" />
+                            <span class="px-4 py-2 bg-gray-100 border border-gray-300 rounded-md peer-checked:bg-UIP-blue hover:bg-UIP-blue hover:text-white">Join Server</span>
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Discord Username</label>
+                        <input type="text" name="discord-username" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Enter your Discord Username" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Hours Requirement</label>
+                        <input type="text" name="hours" class="px-3 py-2 border border-gray-300 rounded-md" placeholder="Ex. 300 Hours" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Orientation Date</label>
+                        <input type="date" name="orientation-date" class="px-3 py-2 border border-gray-300 rounded-md" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Start Date</label><label class="text-sm font-normal">(The End Date of your OJT/Internship)</label>
+                        <input type="date" name="start-date" class="px-3 py-2 border border-gray-300 rounded-md" required />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-lg font-semibold">Estimated End Date</label><label class="text-sm font-normal">(The End Date of your OJT/Internship)</label>
+                        <input type="date" name="end-date" class="px-3 py-2 border border-gray-300 rounded-md" required />
+                    </div>
+                </div>
+
+                <!-- Privacy Agreement -->
+                <div class="flex items-center gap-2 mt-4 lg:px-0 px-4">
+                    <input type="checkbox" name="privacy" id="privacyCheck" class="mr-2" required />
+                    <span class="text-lg font-semibold">I agree that all information that I input is true and I allow the organization to use it.</span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-center mt-10 mb-10 md:mb5">
+                    <button type="submit" id="submitBtn" class="px-6 py-3 bg-UIP-orange text-black rounded-md font-medium hover:bg-white hover:text-black border border-UIP-blue">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <footer class="w-full bg-UIP-blue border-t border-gray-200 py-12 flex flex-col md:flex-row justify-between items-center px-10">
+            <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+                <div class="text-lg text-white text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <img src="/img/uip-icons/UIP_solidA.png" alt="UIP Logo" class="w-10 h-10 mr-4 rounded-full">
+                        <span>UNIFIED INTERNSHIP PROGRAM INCORPORATED</span>
+                    </div>
+                    <div class="mt-2 text-sx">2nd Floor Room 203C, E&V Building, 1039 Quirino Highway corner Dumalay Street,</div>
+                    <div class="text-sx">Brgy. Sta. Monica, Novaliches, Quezon City, 5th District, National Capital Region, 1123</div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center space-x-6">
+                <a target="_blank" href="mailto:info@uip.ph" class="text-white">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                <a target="_blank" href="https://maps.app.goo.gl/eQqh1NYHSGYAZf5RA" class="text-white">
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                </a>
+                <a target="_blank" href="https://www.facebook.com/uipinc" class="text-white">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/uip_incorporated/" class="text-white">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a target="_blank" href="https://open.spotify.com/show/5bDTPJsg5QV6l7Brc5sT1U?si=384a7d1a40734c27" class="text-white">
+                    <i class="fab fa-spotify fa-2x"></i>
+                </a>
+                <a target="_blank" href="https://www.youtube.com/@UIPIncorporated" class="text-white">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+       <!-- Modal HTML -->
+    <div id="confirmation-modal" class="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden px-4 py-8 sm:px-6 sm:py-10">
+        <div class="bg-white p-6 sm:p-8 border border-gray-300 rounded-md shadow-lg relative max-w-sm sm:max-w-md mx-auto">
+            <img src="img/uip-icons/UIP_solidA.png" alt="Logo" class="absolute top-4 left-4 w-16 h-16" />
+            <span class="absolute top-2 right-2 text-gray-500 cursor-pointer" id="modal-close">&times;</span>
+            <p class="text-sm sm:text-lg font-semibold text-center mt-12">
+                Your response is submitted successfully.<br><br>
+                This is your application ID: <span id="application-id" class="font-bold"></span><br><br>
+                Thank you!
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>
